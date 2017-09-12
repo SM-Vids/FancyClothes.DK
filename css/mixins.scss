@@ -1,0 +1,22 @@
+@import "vars";
+
+@mixin sectionstyling($picture){
+    background-image: url($picture);
+    background-size: cover;
+    width: 49%;
+    height: 400px;
+    box-sizing: border-box;
+    padding: 20px;
+    min-width: 400px;
+
+    h2{
+        font-family: $headings;
+        color: $headings-color;
+    }
+
+    button{
+        border: 5px solid black;
+        background: none;
+        font-weight: bold;
+    }
+}
