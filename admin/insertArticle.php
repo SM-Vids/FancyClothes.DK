@@ -72,4 +72,6 @@ session_start();
     $statement->bindparam(7, $category);
     
     $statement->execute();
+
+    header("location: ../index.php");
     ?>

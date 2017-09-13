@@ -95,6 +95,10 @@ body nav ul li a {
   text-decoration: none;
 }
 
+body nav ul li a:hover {
+  text-decoration: underline;
+}
+
 body nav #shopping-cart {
   display: flex;
   justify-content: space-between;
@@ -156,6 +160,10 @@ body aside ul li a {
   text-decoration: none;
   display: block;
   padding: 3px;
+}
+
+body aside ul li a:hover {
+  text-decoration: underline;
 }
 
 body aside h4 {
@@ -228,43 +236,62 @@ body main #formNewArticle button {
   background: none;
 }
 
-body main #malesection {
+body main #section-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+body main #section-container #malesection {
   background-image: url("../img/kategoriHerre.jpg");
   background-size: cover;
-  width: 49%;
   height: 400px;
   box-sizing: border-box;
   padding: 20px;
-  min-width: 400px;
+  width: 45%;
+  min-width: 200px;
+  opacity: 0.6;
+  transition: all 0.5s;
 }
 
-body main #malesection h2 {
+body main #section-container #malesection:hover {
+  opacity: 1;
+}
+
+body main #section-container #malesection h2 {
   font-family: "Karla", sans-serif;
   color: #666666;
 }
 
-body main #malesection button {
+body main #section-container #malesection button {
   border: 5px solid black;
   background: none;
   font-weight: bold;
 }
 
-body main #womansection {
+body main #section-container #womansection {
   background-image: url("../img/kategoriKvinde.jpg");
   background-size: cover;
-  width: 49%;
   height: 400px;
   box-sizing: border-box;
   padding: 20px;
-  min-width: 400px;
+  width: 45%;
+  min-width: 200px;
+  opacity: 0.6;
+  transition: all 0.5s;
 }
 
-body main #womansection h2 {
+body main #section-container #womansection:hover {
+  opacity: 1;
+}
+
+body main #section-container #womansection h2 {
   font-family: "Karla", sans-serif;
   color: #666666;
 }
 
-body main #womansection button {
+body main #section-container #womansection button {
   border: 5px solid black;
   background: none;
   font-weight: bold;
@@ -272,8 +299,10 @@ body main #womansection button {
 
 body main article {
   margin: 10px;
-  min-width: 25%;
-  border: 1px solid #eee;
+  flex: 1;
+  align-self: flex-start;
+  min-width: 200px;
+  border: 2px solid #eee;
 }
 
 body main article img {
@@ -281,8 +310,27 @@ body main article img {
   height: auto;
 }
 
+body main article h4 {
+  font-family: "Karla", sans-serif;
+  color: #666666;
+  text-align: center;
+}
+
 body main article div {
   background: #f5f5f5;
+}
+
+body main article #star-container {
+  text-align: center;
+  background: white;
+}
+
+body main article #star-container .yellow {
+  color: gold;
+}
+
+body main article a {
+  color: black;
 }
 
 body footer {

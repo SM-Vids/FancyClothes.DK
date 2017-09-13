@@ -102,6 +102,10 @@ body{
                 font-family: $nav-font;
                 font-size: 15pt;
                 text-decoration: none;
+
+                &:hover{
+                    text-decoration: underline;
+                }
             }
         }
 
@@ -166,6 +170,9 @@ body{
                 display: block;
                 padding: 3px;
 
+                &:hover{
+                    text-decoration: underline;
+                }
             }
         }
 
@@ -239,26 +246,54 @@ body{
              }
         }
 
-        #malesection{
-            @include sectionstyling("../img/kategoriHerre.jpg");
-        }
+        #section-container{
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
 
-        #womansection{
-            @include sectionstyling("../img/kategoriKvinde.jpg");
+            #malesection{
+                @include sectionstyling("../img/kategoriHerre.jpg");
+            }
+    
+            #womansection{
+                @include sectionstyling("../img/kategoriKvinde.jpg");
+            }
         }
 
         article{
             margin: 10px;
-            min-width: 25%;
-            border: 1px solid #eee;
+            flex: 1;
+            align-self: flex-start;
+            min-width: 200px;
+            border: 2px solid #eee;
 
             img{
                 width: 100%;
                 height: auto;
             }
 
+            h4{
+                font-family: $headings;
+                color: $headings-color;
+                text-align: center;
+            }
+
             div{
                 background: #f5f5f5;
+            }
+
+            #star-container{
+                text-align: center;
+                background: white;
+
+                .yellow{
+                    color: gold;
+                }
+            }
+
+            a{
+                color: black;
             }
         }
     }

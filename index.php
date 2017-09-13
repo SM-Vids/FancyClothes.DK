@@ -30,6 +30,7 @@
                         </form>
                         <?php
                 } ?>
+                <div id="section-container">
         <div id="malesection">
                 <h2>Herretøj</h2>
                 <button>Lær mere</button>
@@ -37,6 +38,7 @@
         <div id="womansection">
                 <h2>Kvindetøj</h2>
                 <button>Lær mere</button>
+        </div>
         </div>
         <?php require "admin/getArticles.php"; ?>
         </main>

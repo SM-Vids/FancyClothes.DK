@@ -16,23 +16,28 @@
         <article>
             <img src="img/<?php echo $row['imgSrc']; ?>" alt="<?php echo $row['imgAlt']; ?>">
             
-            <h2><?php echo $row['heading']; ?></h2>
+            <h4><?php echo $row['heading']; ?></h4>
 
+            <div id="star-container">
             <?php
             $a = 0;
-            while ($a <= $row['stars'] ) {
-                echo '<i class="fa fa-star" aria-hidden="true"></i>';
+            while ($a < $row['stars'] ) {
+                echo '<i class="fa fa-star yellow" aria-hidden="true"></i>';
 
                 $a = $a + 1;
             }
-            while ($a <= 5){
+            while ($a < 5){
                 echo '<i class="fa fa-star-o" aria-hidden="true"></i>';
+
+                $a = $a + 1;
             }
             ?>
+            </div>
             <div id="grey">
             <p class="time"><?php echo $row['published']; ?> by: <?php echo $row['dbUsername']; ?></p>
             <p class="description"><?php echo $row['description']; ?></p>
             <a class="read-more" href="#">Læs mere...</a>
+            <br>
 		    
             <?php
                 if (isset($_SESSION['accessLevel']) && $_SESSION['accessLevel'] == 1 ) {

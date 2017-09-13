@@ -3,11 +3,17 @@
 @mixin sectionstyling($picture){
     background-image: url($picture);
     background-size: cover;
-    width: 49%;
     height: 400px;
     box-sizing: border-box;
     padding: 20px;
-    min-width: 400px;
+    width: 45%;
+    min-width: 200px;
+    opacity: 0.6;
+    transition: all 0.5s;
+
+    &:hover{
+        opacity: 1;
+    }
 
     h2{
         font-family: $headings;
