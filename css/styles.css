@@ -408,6 +408,43 @@ body footer #social {
   display: none;
 }
 
+#column {
+  flex-direction: column;
+}
+
+#column #newUser {
+  display: flex;
+  flex-direction: column;
+}
+
+#column #newUser input {
+  width: 30vw;
+  padding: 3px;
+  margin-bottom: 10px;
+}
+
+#column #newUser #formUsername {
+  margin-bottom: 20px;
+}
+
+#column #newUser button {
+  width: 100px;
+  margin-top: 20px;
+  border: 3px solid #666;
+  font-weight: bold;
+  background: none;
+}
+
+#column a {
+  color: black;
+  font-size: 15pt;
+  text-decoration: none;
+}
+
+#column a:hover {
+  text-decoration: underline;
+}
+
 @media screen and (max-width: 900px) {
   body {
     grid-template-areas: "header header header header" "logo logo logo logo" "nav nav nav nav" "slide slide slide slide" "sitename sitename sitename sitename" "aside aside heading heading" "aside aside main main" "footer footer footer footer";

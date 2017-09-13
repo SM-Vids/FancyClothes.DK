@@ -27,4 +27,11 @@ $(document).ready(function() {
 	$('nav').children().first().click(function () { 
 		$('nav').children().next().slideToggle();
 	});
+
+	//Hide new user form
+	$('#newUser').hide();
+	$('#newUserLink').click(function (e) { 
+		e.preventDefault();
+		$('#newUser').slideToggle();
+	});
 });

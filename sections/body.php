@@ -17,10 +17,10 @@
             </div>
             <div id="newsletter">
                 <h4>Tilmeld nyhedsbrev</h4>
-                <form action="">
-                    <input type="text" placeholder="Navn">
-                    <input type="email" placeholder="Email">
-                    <button>Tilmeld</button>
+                <form action="admin/newsletter.php" method="POST">
+                    <input type="text" placeholder="Navn" id="newsletterName" name="newsletterName" required>
+                    <input type="email" placeholder="Email" id="newsletterEmail" name="newsletterEmail" required>
+                    <button type="submit" value="submit">Tilmeld</button>
                 </form>
             </div>
         </aside>
