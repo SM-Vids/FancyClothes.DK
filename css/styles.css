@@ -5,7 +5,7 @@ body {
   margin-top: 20px;
   grid-template-columns: 15vw 13vw 1fr 15vw;
   grid-template-rows: 80px 120px auto auto auto 100px auto auto;
-  grid-template-areas: ". header header ." ". logo . ." ". nav nav ." ". slide slide ." "sitename sitename sitename sitename" ". aside heading ." ". aside main ." ". footer footer .";
+  grid-template-areas: ". header header ." ". logo logo ." ". nav nav ." ". slide slide ." "sitename sitename sitename sitename" ". aside heading ." ". aside main ." ". footer footer .";
 }
 
 body header {
@@ -56,11 +56,16 @@ body header form button {
 
 body #home-logo {
   grid-area: logo;
+  display: flex;
 }
 
 body #home-logo img {
   height: 80px;
   width: auto;
+}
+
+body #home-logo h2 {
+  margin-left: 20px;
 }
 
 body nav {
@@ -190,6 +195,39 @@ body main {
   margin-bottom: 100px;
 }
 
+body main #formNewArticle {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  margin-bottom: 20px;
+}
+
+body main #formNewArticle input {
+  margin: 7px;
+  padding: 3px;
+  width: 100%;
+}
+
+body main #formNewArticle textarea {
+  margin: 7px;
+  padding: 3px;
+  width: 100%;
+  resize: none;
+}
+
+body main #formNewArticle select {
+  margin: 10px;
+  width: 100px;
+}
+
+body main #formNewArticle button {
+  width: 100px;
+  margin-top: 10px;
+  border: 3px solid #666;
+  font-weight: bold;
+  background: none;
+}
+
 body main #malesection {
   background-image: url("../img/kategoriHerre.jpg");
   background-size: cover;
@@ -232,6 +270,21 @@ body main #womansection button {
   font-weight: bold;
 }
 
+body main article {
+  margin: 10px;
+  min-width: 25%;
+  border: 1px solid #eee;
+}
+
+body main article img {
+  width: 100%;
+  height: auto;
+}
+
+body main article div {
+  background: #f5f5f5;
+}
+
 body footer {
   grid-area: footer;
   display: flex;
@@ -251,6 +304,7 @@ body footer #social {
   letter-spacing: 5px;
 }
 
+/* specific selectors */
 #icon > img {
   height: 20px;
   width: auto;
@@ -275,6 +329,37 @@ body footer #social {
   top: 0;
 }
 
+#red {
+  color: red;
+  text-decoration: underline;
+}
+
+#loginForm {
+  display: flex;
+  flex-direction: column;
+}
+
+#loginForm input {
+  width: 30vw;
+  padding: 3px;
+}
+
+#loginForm #formUsername {
+  margin-bottom: 20px;
+}
+
+#loginForm button {
+  width: 100px;
+  margin-top: 20px;
+  border: 3px solid #666;
+  font-weight: bold;
+  background: none;
+}
+
+#nav-burger {
+  display: none;
+}
+
 @media screen and (max-width: 900px) {
   body {
     grid-template-areas: "header header header header" "logo logo logo logo" "nav nav nav nav" "slide slide slide slide" "sitename sitename sitename sitename" "aside aside heading heading" "aside aside main main" "footer footer footer footer";
@@ -294,5 +379,14 @@ body footer #social {
   }
   #slideshow {
     display: none;
+  }
+  #loginForm input {
+    width: 90vw;
+  }
+  #nav-burger {
+    height: 50px;
+    width: auto;
+    display: block;
+    cursor: pointer;
   }
 }

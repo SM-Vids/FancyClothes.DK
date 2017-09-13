@@ -11,17 +11,19 @@
             </form>
         </header>
         <div id="home-logo">
+            <p>
             <img src="img/homeIcon.png" alt="Hvid trøje logo">
             <?php
-            if (isset($_SESSION['username'])) {
-                echo "<h2>Velkommen " + $_SESSION['username'] +"</h2>";
-            } else {
-                # code...
+            if (isset($_SESSION['userName'])) {
+                echo '<h2>Velkommen ';
+                echo $_SESSION['userName'];
+                echo '</h2>';
             }
-            
             ?>
+            </p>
         </div>
         <nav>
+            <img id="nav-burger" src="img/menu.svg" alt="Navigations burger">
             <ul>
                 <li><a href="index.php" <?php if (basename($_SERVER['PHP_SELF']) == "index.php") {
                     echo 'class="active"';
@@ -30,9 +32,15 @@
                 <li><a href="#">Nyheder</a></li>
                 <li><a href="#">Handelsbetingelser</a></li>
                 <li><a href="#">Om os</a></li>
-                <li><a href="login.php" <?php if (basename($_SERVER['PHP_SELF']) == "login.php") {
-                    echo 'class="active"';
-                } ?>>Log ind</a></li>
+                <?php if (!isset($_SESSION['userName'])  && basename($_SERVER['PHP_SELF']) == "login.php") {
+                    echo '<li><a class="active" href="login.php"> Log ind</a></li>';
+                }
+                else if (!isset($_SESSION['userId']) || $_SESSION['userId'] == 0) {
+                    echo '<li><a href="login.php"> Log ind</a></li>';
+                }
+                else{
+                    echo '<li><a href="admin/logout.php"> Log ud</a></li>';
+                } ?>
             </ul>
             <div id="shopping-cart">
                 <p>Din indkøbskurv er tom</p>
