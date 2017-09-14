@@ -42,6 +42,15 @@
                 <button>Lær mere</button>
         </div>
         </div>
-        <?php require "admin/getArticles.php"; ?>
+        <?php 
+        if (isset($_GET['category'])) {
+                $category = $_GET['category'];
+
+                require "admin/sortArticles.php";
+        } else {
+                require "admin/getArticles.php";
+        }
+        
+        ?>
         </main>
         <?php require "sections/bottom.php"; ?>      
