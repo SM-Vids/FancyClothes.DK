@@ -12,6 +12,7 @@ require "sections/top.php"; ?>
             <button>Log ind</button>
         </form>
         <?php
+        //If userId is 0 display error userid is set in checkLogin.php
         if (isset($_SESSION['userid']) && $_SESSION['userid'] == 0) {
             echo '<h4 id="red">Beklager forkert brugernavn eller kodeord. Prøv igen</h4>';
         }

@@ -14,6 +14,7 @@ try {
         $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         echo '<script>console.log("Connected successfully")</script>'; 
     }
+    //Catch PDO exception
 catch(PDOException $e)
     {
         //Error handling

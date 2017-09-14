@@ -189,9 +189,10 @@ body{
             form{
                 display: flex;
                 flex-direction: column;
+                background: #eee;
 
                 input{
-                    width: 130px;
+                    width: 85%;
                     margin: 5px auto;
                     padding: 5px;
                 }
@@ -401,6 +402,9 @@ body{
             text-decoration: underline;
         }
     }
+}
+#map{
+    border: 5px solid #666;
 }
 
 

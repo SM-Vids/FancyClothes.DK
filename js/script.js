@@ -30,6 +30,8 @@ $(document).ready(function() {
 
 	//Hide new user form
 	$('#newUser').hide();
+
+	//Sjow new user form on click
 	$('#newUserLink').click(function (e) { 
 		e.preventDefault();
 		$('#newUser').slideToggle();

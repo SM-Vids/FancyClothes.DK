@@ -25,13 +25,16 @@
         <nav>
             <img id="nav-burger" src="img/menu.svg" alt="Navigations burger">
             <ul>
+                <!-- if current php page is index.php give it class="active" -->
                 <li><a href="index.php" <?php if (basename($_SERVER['PHP_SELF']) == "index.php") {
                     echo 'class="active"';
                 } ?>>Forside</a></li>
                 <li><a href="#">Produkter</a></li>
                 <li><a href="#">Nyheder</a></li>
                 <li><a href="#">Handelsbetingelser</a></li>
-                <li><a href="#">Om os</a></li>
+                <li><a href="about.php" <?php if (basename($_SERVER['PHP_SELF']) == "about.php") {
+                    echo 'class="active"';
+                } ?>>Om os</a></li>
                 <?php if (!isset($_SESSION['userName'])  && basename($_SERVER['PHP_SELF']) == "login.php") {
                     echo '<li><a class="active" href="login.php"> Log ind</a></li>';
                 }

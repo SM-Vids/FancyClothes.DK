@@ -180,10 +180,11 @@ body aside #newsletter {
 body aside #newsletter form {
   display: flex;
   flex-direction: column;
+  background: #eee;
 }
 
 body aside #newsletter form input {
-  width: 130px;
+  width: 85%;
   margin: 5px auto;
   padding: 5px;
 }
@@ -443,6 +444,10 @@ body footer #social {
 
 #column a:hover {
   text-decoration: underline;
+}
+
+#map {
+  border: 5px solid #666;
 }
 
 @media screen and (max-width: 900px) {

@@ -3,13 +3,14 @@
 
 # TEAM
 
-    <name> -- <role> -- <twitter>
+    Simon Lejel Designer, Developer, Programmer https://github.com/SM-Vids
 
 # THANKS
 
-    <name>
+    Kasper Høenhof Svanholm
+    Matias Søndergaard Schjøtt
 
 # TECHNOLOGY COLOPHON
 
-    CSS3, HTML5
+    CSS3, HTML5, PHP
     Apache Server Configs, jQuery, Modernizr, Normalize.css
