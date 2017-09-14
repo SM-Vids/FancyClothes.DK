@@ -1,4 +1,6 @@
         <?php session_start();
+        $title = "Hjem";
+        $description = "Tøjbutik i Fredensvang centrum. Vi har tøj, sjo og jakker. Kom ind og se vores lædertasker.";
         ?>
         <?php require "sections/top.php"; ?>
         <main>

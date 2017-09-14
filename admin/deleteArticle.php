@@ -6,7 +6,7 @@
     require_once "connect.php";
 
     //$statement = $dbh->prepare("DELETE FROM `articles` WHERE `articles`.`id` = ?");
-    $statement = $dbh->prepare("SELECT * FROM productes WHERE `products`.`id` = ?");
+    $statement = $dbh->prepare("SELECT * FROM products WHERE products.id = ?");
     
     $statement->bindParam(1, $articleId);
     $statement->execute();
@@ -26,7 +26,7 @@
     function deleteById($ID)
     {
         require "connect.php";
-        $statement = $dbh->prepare("DELETE FROM `articles` WHERE `articles`.`id` = ?");
+        $statement = $dbh->prepare("DELETE FROM `products` WHERE `products`.`id` = ?");
 
         $statement->bindParam(1, $ID);
         $statement->execute();

@@ -34,7 +34,7 @@ session_start();
             $imgSrc = basename($_FILES["formImgSrc"]["name"]);
         }
         // Check file size
-        if ($_FILES["formImgSrc"]["size"] > 1000000) {
+        if ($_FILES["formImgSrc"]["size"] > 4000000) {
             echo "Sorry, your file is too large.";
             $uploadOk = 0;
         }

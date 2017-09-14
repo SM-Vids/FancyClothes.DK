@@ -1,5 +1,7 @@
 <?php 
 session_start();
+$title = "Login & Registrer";
+$description = "Registrer dig på vores side så du kan købe vores tøj, sko eller tasker.";
 require "sections/top.php"; ?>
         <main id="column">
             <form id="loginForm" action="admin/checkLogin.php" method="POST">
